@@ -49,3 +49,33 @@
 view -> resposta
 rotas -> caminho
 template -> resposta HTML
+
+Aula 04 - Introdução aos templates
+
+    # Trabalhar com herança entre os templates
+    - estrutura para reutilização _base.html (basico que todo mundo herda dele)
+    - template de layout generico _layout1.html (base para todo o layout do sistema)
+      OBS - quando usa o underline na frente significa que o template é parcial
+          - Consultar Jinja2 e pagina de ducumentação de template django
+    - aplicar o layout generico em um tempate final
+    - arquivos estaticos - Imagens, CSS, javascript
+    - usar um arquivo estaticos : favicon
+        # Incluir no arquivo settings.py do projeto
+        # import os # modulo de arquivos do SO        
+        # Cria os arquivos estaticos configurando a segurança
+            STATIC_ROOT = os.path.join(BASE_DIR, "public")
+            STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
+
+        # Comando  para criar os arquivos estaticos
+            py manage.py collectstatic
+
+
+
+    Exemplo de estrutura de uso 
+        {{ var }} => imprime os valores de variaves
+        {%  if var %} => para excutar comandos
+        <a href=""></a>
+        {% else %}
+        
+        {% endif %}
+        {# #} => comentarios

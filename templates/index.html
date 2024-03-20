@@ -1,12 +1,10 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minhas Enquete</title>
-</head>
-<body>
-    <h1>Bem vindo ao sistema de Enquetes</h1>
-    
-</body>
-</html>
+{% extends '_layout1.html' %}
+
+{% block head_tittle %}
+    Minhas Enquetes
+{% endblock %}
+
+{% block content %}    
+    <h1>{{ titulo }}</h1>
+{% endblock %}
+
