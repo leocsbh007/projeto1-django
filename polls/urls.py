@@ -6,6 +6,6 @@ from polls.views import index, ola
 
 # Cria uma lista de caminhos
 urlpatterns = [
-    path('index', index, name="index")
+    path('index', index, name="index"),
     path('ola', ola, name="ola"),
 ]

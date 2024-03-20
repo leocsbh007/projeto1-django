@@ -37,7 +37,14 @@
     # Inclue no urls.py principal do projeto na lista urlpatterns.                                ]"
 
 5. Inicializar o servidor de desenvolvimento para testes
+    # py manage.py runserver
+
 6. Criar uma template HTML
+
+    # Arquivo do projeto settings.py na cahve de configuração de Templates
+    # Adicionar a chave 'DIRS' : ['templates'],
+    # cria uma pasta na raiz do projeto com o nome 'tempates'
+    # dentro da pasta cria-se os arquivos HTML
 
 view -> resposta
 rotas -> caminho
