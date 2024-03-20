@@ -1,7 +1,13 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+
 
 # Create your views here.
-def index(request):
-    return HttpResponse("Hello, World, You're at the polls index.")
+from django.http import HttpResponse
 
+# define um view baseado em função
+def index(request):
+    return HttpResponse("Hello, World, Pagina Principal. Site de Enquetes")
+
+# define uma view baseada em função
+def ola(request):
+    return HttpResponse('Ola Django')

@@ -1,0 +1,44 @@
+1. Criando o projeto
+    # No console digitar 
+    # "webapp" é o nome do projeto"
+    # Não esquecer do espaço . no final para duplicar a pasta de projeto
+    django-admin startproject webapp .
+
+2. Habilitar o app /módulo polls
+    # No console digitar
+    # "polls" é o nome do modulo 1 do site, pode existir varios modulos
+    # dependene do contexto
+    django-admin startapp polls
+
+    # No arquivo settings.py do projeto tem que habilitar o app que foi Criando
+    # na lista -> 
+    INSTALLED_APPS = [
+                    'polls.apps.PollsConfig, # notação de pontos para navegar na estrutura de arquivos
+                    .......
+                    ]
+
+3. Criar uma view para o app polls
+    # criação e defição de rota baseada em um função:
+    # Exemplo
+    
+    from django.http import HttpResponse
+
+    # define um view baseado em função
+    def index(request):
+        return HttpResponse("Hello, World, Pagina Principal. Site de Enquetes")
+
+
+4. Adicionar as rotas
+    # Indicar qual é o caminho que as views irão usar para dar as respostas
+    # Cria um arquivo urls.py dentro da pasta polls
+    # cria uma lista de caminhos - "urlpatterns = [
+                                        path('index', index, name="index")
+                                        path('ola', ola, name="ola"),
+    # Inclue no urls.py principal do projeto na lista urlpatterns.                                ]"
+
+5. Inicializar o servidor de desenvolvimento para testes
+6. Criar uma template HTML
+
+view -> resposta
+rotas -> caminho
+template -> resposta HTML

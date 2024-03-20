@@ -1,6 +1,11 @@
+# importa o modulo de caminhos
 from django.urls import path
-from . import views
 
+# importa um modulo intero de views
+from polls.views import index, ola
+
+# Cria uma lista de caminhos
 urlpatterns = [
-    path("", views.index, name="index")
+    path('index', index, name="index")
+    path('ola', ola, name="ola"),
 ]
