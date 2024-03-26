@@ -79,3 +79,34 @@ Aula 04 - Introdução aos templates
         
         {% endif %}
         {# #} => comentarios
+        
+
+======== Introdução aos models
+
+- Introdução ao ORM e models
+- Visualização de dados
+python manage.py showmigrate
+- Migração de dados
+python manage.py migrate
+- Reversão de modelos
+python manage.py migrate auth 001 - Reverte até a 001
+python manage.py migrate auth zero - Reverte tudo
+- Criar um modelo
+- Criar uma pergunta via Shell
+python manage.py shell
+>>> from polls.models import Question
+>>> Question.objects.all() # Retorna todos os objetos do banco
+<QuerySet []>
+>>>from datetime import datetime # Importar o modulo de data, pois vamos precisar da data para criar uma pergunta
+>>>agora = datetime.now()
+>>>question1 = Question(question_text="Qual sua cor favorita?", pub_date=agora) # cria uma pergunta
+>>>question1.question_text
+'Qual é a sua cor favorita?'
+>>>question1.id # Não mostra nada pois ainda não foi salvo no banco
+>>>question1.save() # salva no banco
+>>>question1.id
+1
+>>>quit() # fecha o shell
+- Exibir dados em um template
+
+
